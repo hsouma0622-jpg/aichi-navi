@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>愛知 交通ナビリンク</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#556B2F">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <style>
+        :root {
+            --olive-dark: #3E4F22;
+            --olive-primary: #556B2F;
+            --olive-light: #6B8E23;
+            --olive-bg: #F4F6F0;
+            --text-dark: #2F3E1B;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--olive-bg);
+            color: var(--text-dark);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            margin-bottom: 24px;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--olive-light);
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+            color: var(--olive-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        main {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .category-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .category-title {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--olive-primary);
+            padding-left: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .link-group {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 8px 12px;
+            box-shadow: 0 4px 6px rgba(85, 107, 47, 0.05);
+            border: 1px solid rgba(107, 142, 35, 0.1);
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            padding: 14px 4px;
+            text-decoration: none;
+            color: var(--text-dark);
+            border-radius: 8px;
+            transition: background-color 0.2s;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .link-card:not(:last-child) {
+            border-bottom: 1px solid #ECEFE6;
+        }
+
+        .link-card:hover, .link-card:active {
+            background-color: rgba(107, 142, 35, 0.08);
+            color: var(--olive-dark);
+        }
+
+        .icon {
+            margin-right: 12px;
+            font-size: 1.1rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .arrow {
+            margin-left: auto;
+            color: var(--olive-light);
+            font-size: 0.85rem;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 24px 0;
+            font-size: 0.75rem;
+            color: var(--olive-light);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🏯 愛知 交通ナビリンク</h1>
+    </header>
+
+    <main>
+        <!-- 総合・乗換 -->
+        <div class="category-container">
+            <div class="category-title">総合・乗換案内</div>
+            <div class="link-group">
+                <a href="https://yahoo.co.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🔍</span> Yahoo!乗換案内 <span class="arrow">➔</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 鉄道 -->
+        <div class="category-container">
+            <div class="category-title">鉄道（主要・地下鉄）</div>
+            <div class="link-group">
+                <a href="https://jr-central.co.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚄</span> JR東海 <span class="arrow">➔</span>
+                </a>
+                <a href="https://meitetsu.co.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚃</span> 名古屋鉄道（名鉄） <span class="arrow">➔</span>
+                </a>
+                <a href="https://city.nagoya.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚇</span> 名古屋市営地下鉄 <span class="arrow">➔</span>
+                </a>
+                <a href="https://kintetsu.co.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚆</span> 近畿日本鉄道（近鉄） <span class="arrow">➔</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 路線バス -->
+        <div class="category-container">
+            <div class="category-title">主要バス路線</div>
+            <div class="link-group">
+                <a href="https://city.nagoya.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚌</span> 名古屋市営バス <span class="arrow">➔</span>
+                </a>
+                <a href="https://meitetsu-bus.co.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚌</span> 名鉄バス <span class="arrow">➔</span>
+                </a>
+                <a href="https://jrtbinm.co.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚌</span> ジェイアール東海バス <span class="arrow">➔</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- その他鉄道・特殊輸送 -->
+        <div class="category-container">
+            <div class="category-title">その他鉄道・新交通</div>
+            <div class="link-group">
+                <a href="https://linimo.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚟</span> リニモ（愛知高速交通） <span class="arrow">➔</span>
+                </a>
+                <a href="https://guideway.co.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚌</span> ゆとりーとライン <span class="arrow">➔</span>
+                </a>
+                <a href="http://aikanrailway.co.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚃</span> 愛知環状鉄道 <span class="arrow">➔</span>
+                </a>
+                <a href="https://tkr-loop.co.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚃</span> 東海交通事業（城北線） <span class="arrow">➔</span>
+                </a>
+                <a href="http://aonamiline.co.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚄</span> あおなみ線 <span class="arrow">➔</span>
+                </a>
+                <a href="https://toyohashirailway.com" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚋</span> 豊橋鉄道（路面電車・渥美線） <span class="arrow">➔</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 空港・港湾 -->
+        <div class="category-container">
+            <div class="category-title">空港アクセス・フェリー</div>
+            <div class="link-group">
+                <a href="https://centrair.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">✈️</span> 中部国際空港（セントレア） <span class="arrow">➔</span>
+                </a>
+                <a href="https://taiheiyo-ferry.co.jp" target="_blank" rel="noopener" class="link-card">
+                    <span class="icon">🚢</span> 太平洋フェリー（名古屋港） <span class="arrow">➔</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Aichi Transit Navigator
+    </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('SW registered:', reg.scope))
+                    .catch(err => console.log('SW registration failed:', err));
+            });
+        }
+    </script>
+</body>
+</html>
