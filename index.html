@@ -6,7 +6,7 @@
     <title>愛知 交通ナビリンク</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#556B2F">
-    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="apple-touch-icon" href="https://iconify.design">
     <style>
         :root {
             --olive-dark: #3E4F22;
@@ -137,7 +137,8 @@
         <div class="category-container">
             <div class="category-title">総合・乗換案内</div>
             <div class="link-group">
-                <a href="https://yahoo.co.jp" target="_blank" rel="noopener" class="link-card">
+                <!-- PWAのセキュリティブロックを回避するため rel を徹底強化 -->
+                <a href="https://yahoo.co.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🔍</span> Yahoo!乗換案内 <span class="arrow">➔</span>
                 </a>
             </div>
@@ -147,16 +148,16 @@
         <div class="category-container">
             <div class="category-title">鉄道（主要・地下鉄）</div>
             <div class="link-group">
-                <a href="https://jr-central.co.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="https://jr-central.co.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚄</span> JR東海 <span class="arrow">➔</span>
                 </a>
-                <a href="https://meitetsu.co.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="https://meitetsu.co.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚃</span> 名古屋鉄道（名鉄） <span class="arrow">➔</span>
                 </a>
-                <a href="https://city.nagoya.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="https://city.nagoya.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚇</span> 名古屋市営地下鉄 <span class="arrow">➔</span>
                 </a>
-                <a href="https://kintetsu.co.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="https://kintetsu.co.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚆</span> 近畿日本鉄道（近鉄） <span class="arrow">➔</span>
                 </a>
             </div>
@@ -166,38 +167,38 @@
         <div class="category-container">
             <div class="category-title">主要バス路線</div>
             <div class="link-group">
-                <a href="https://city.nagoya.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="https://city.nagoya.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚌</span> 名古屋市営バス <span class="arrow">➔</span>
                 </a>
-                <a href="https://meitetsu-bus.co.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="https://meitetsu-bus.co.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚌</span> 名鉄バス <span class="arrow">➔</span>
                 </a>
-                <a href="https://jrtbinm.co.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="https://jrtbinm.co.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚌</span> ジェイアール東海バス <span class="arrow">➔</span>
                 </a>
             </div>
         </div>
 
-        <!-- その他鉄道・特殊輸送 -->
+        <!-- その他鉄道・新交通 -->
         <div class="category-container">
             <div class="category-title">その他鉄道・新交通</div>
             <div class="link-group">
-                <a href="https://linimo.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="https://linimo.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚟</span> リニモ（愛知高速交通） <span class="arrow">➔</span>
                 </a>
-                <a href="https://guideway.co.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="https://guideway.co.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚌</span> ゆとりーとライン <span class="arrow">➔</span>
                 </a>
-                <a href="http://aikanrailway.co.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="http://aikanrailway.co.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚃</span> 愛知環状鉄道 <span class="arrow">➔</span>
                 </a>
-                <a href="https://tkr-loop.co.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="https://tkr-loop.co.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚃</span> 東海交通事業（城北線） <span class="arrow">➔</span>
                 </a>
-                <a href="http://aonamiline.co.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="http://aonamiline.co.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚄</span> あおなみ線 <span class="arrow">➔</span>
                 </a>
-                <a href="https://toyohashirailway.com" target="_blank" rel="noopener" class="link-card">
+                <a href="https://toyohashirailway.com" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚋</span> 豊橋鉄道（路面電車・渥美線） <span class="arrow">➔</span>
                 </a>
             </div>
@@ -207,10 +208,10 @@
         <div class="category-container">
             <div class="category-title">空港アクセス・フェリー</div>
             <div class="link-group">
-                <a href="https://centrair.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="https://centrair.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">✈️</span> 中部国際空港（セントレア） <span class="arrow">➔</span>
                 </a>
-                <a href="https://taiheiyo-ferry.co.jp" target="_blank" rel="noopener" class="link-card">
+                <a href="https://taiheiyo-ferry.co.jp" target="_blank" rel="noopener noreferrer" class="link-card">
                     <span class="icon">🚢</span> 太平洋フェリー（名古屋港） <span class="arrow">➔</span>
                 </a>
             </div>
